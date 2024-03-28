@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- This is written in HTML + CSS -->
+  <div 
+    id="box"
+    style="width: 200px;
+           height: 300px;
+           background-color: lightblue;
+           text-align: center;
+           padding-top: 10px;"
+  >
+    <h1 style="font-family: verdana;">
+      HELLO WORLD
+    </h1>
+    <h2
+      id="subheading" 
+      style="font-family: monospace;">
+      i am blue
+    </h2>
+    <button 
+      id="button" 
+      style="font-family: monospace;
+             border-radius: 20px;
+             background-color: lightpink;">
+      <h5 style="font-size: 15px;">
+        change the color
+      </h5>
+    </button>
+  </div>
+
+  <script> // THIS IS SECTION IS WRITTEN IN JAVASCRIPT
+    // action
+    function changeColor() {
+      document.getElementById('box').style.backgroundColor = 'yellow';
+      document.getElementById('subheading').innerText = 'i am yellow';
+    }
+    // trigger
+    document.getElementById('button').addEventListener("click", changeColor);
+  </script>
+
+</body>
+
+</html>
