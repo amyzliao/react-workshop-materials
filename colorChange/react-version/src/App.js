@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+function changeColor() {
+  document.getElementById('box').style.backgroundColor = 'yellow';
+  document.getElementById('subheading').innerText = 'i am yellow';
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      id="box"
+      style={{
+        width: "200px",
+        height: "300px",
+        backgroundColor: "lightblue",
+        textAlign: "center",
+        paddingTop: "10px"
+      }}
+    >
+      <h1 style={{ fontFamily: "verdana" }}>
+        HELLO WORLD
+      </h1>
+      <h2
+        id="subheading"
+        style={{ fontFamily: "monospace" }}>
+        i am blue
+      </h2>
+      <button
+        id="button"
+        style={{
+          fontFamily: "monospace",
+          borderRadius: "20px",
+          backgroundColor: "lightpink"
+        }}
+        onClick={changeColor}
+      >
+        <h5 style={{ fontSize: "15px" }}>
+          change the color
+        </h5>
+      </button>
     </div>
   );
 }
